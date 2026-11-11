@@ -31,7 +31,7 @@ small{color:var(--muted)}
   <div class="card"><h2>Clics por app (afiliados)</h2><div class="grid" id="clics"></div><small>Clic = alguien abrió el enlace de esa app desde tu web. La instalación se confirma en los paneles de Kaching y Releasit.</small></div>
 </div>
 <script>
-var apps=[['kaching-bundles','Kaching Bundles'],['releasit','Releasit COD Form'],['shopify-1','Shopify por $1'],['tiktok-ads','TikTok Ads'],['kaching-postcompra','Kaching Post Purchase'],['kaching-carrito','Kaching Cart Upsell'],['kaching-suscripciones','Kaching Subscriptions'],['dropea','Dropea'],['dominio','Dominio'],['capcut','CapCut'],['higgsfield','Higgsfield'],['fomo','FOMO'],['contacto-x','Contacto por X'],['contacto-linkedin','Contacto por LinkedIn']];
+var apps=[['kaching-bundles','Kaching Bundles'],['releasit','Releasit COD Form'],['shopify-1','Shopify por $1'],['tiktok-ads','TikTok Ads'],['kaching-postcompra','Kaching Post Purchase'],['kaching-carrito','Kaching Cart Upsell'],['kaching-suscripciones','Kaching Subscriptions'],['dropea','Dropea'],['dominio','Dominio'],['capcut','CapCut'],['higgsfield','Higgsfield'],['fomo','FOMO'],['contacto-whatsapp','Contacto por WhatsApp'],['contacto-x','Contacto por X'],['contacto-linkedin','Contacto por LinkedIn']];
 var g=document.getElementById('clics');
 apps.forEach(function(a){var d=document.createElement('div');d.className='row';d.innerHTML='<span>'+a[1]+'</span><img alt="clics" src="https://kounter.kerolloz.dev/badge/okapps-angel.clic-'+a[0]+'?silent=true&label=clics&color=16a34a&t='+Date.now()+'">';g.appendChild(d);});
 </script>
