@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Métricas · OK Apps</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#0a0c10;--muted:#5d6676;--line:#e4e7ec;--grad:linear-gradient(100deg,#2563eb 0%,#16a34a 55%,#84cc16 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;padding:32px 18px}
+.wrap{max-width:900px;margin:0 auto;display:grid;gap:22px}
+h1{font:800 clamp(28px,4vw,40px)/1.05 "Inter Tight",sans-serif;letter-spacing:-.04em}
+h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+p.lead{color:var(--muted)}
+h2{font:700 18px "Inter Tight",sans-serif;margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;font-weight:600;font-size:14.5px}
+.row img{height:20px}
+.big{display:flex;align-items:center;gap:14px}
+.big img{height:28px}
+small{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div><h1>Métricas de <span>OK Apps</span></h1><p class="lead">Contadores en vivo de la web. Cada visita y cada clic en una app suma aquí. Recarga para ver lo último.</p></div>
+  <div class="card"><h2>Visitas a la web</h2><div class="big"><img src="https://hits.sh/angeldeltaequipo-code.github.io/okapps/visitas.svg?view=total&label=visitas%20totales&color=16a34a" alt="Visitas totales"><img src="https://hits.sh/angeldeltaequipo-code.github.io/okapps/visitas.svg?view=today-total&label=hoy&color=2563eb" alt="Visitas de hoy"></div><small>Cuenta cargas de la página (incluidas las tuyas).</small></div>
+  <div class="card"><h2>Clics por app (afiliados)</h2><div class="grid" id="clics"></div><small>Clic = alguien abrió el enlace de esa app desde tu web. La instalación se confirma en los paneles de Kaching y Releasit.</small></div>
+</div>
+<script>
+var apps=[['kaching-bundles','Kaching Bundles'],['releasit','Releasit COD Form'],['shopify-1','Shopify por $1'],['tiktok-ads','TikTok Ads'],['kaching-postcompra','Kaching Post Purchase'],['kaching-carrito','Kaching Cart Upsell'],['kaching-suscripciones','Kaching Subscriptions'],['dropea','Dropea'],['dominio','Dominio'],['capcut','CapCut'],['higgsfield','Higgsfield'],['fomo','FOMO'],['contacto-x','Contacto por X'],['contacto-linkedin','Contacto por LinkedIn']];
+var g=document.getElementById('clics');
+apps.forEach(function(a){var d=document.createElement('div');d.className='row';d.innerHTML='<span>'+a[1]+'</span><img alt="clics" src="https://hits.sh/angeldeltaequipo-code.github.io/okapps/clic/'+a[0]+'.svg?view=total&label=clics&color=16a34a&t='+Date.now()+'">';g.appendChild(d);});
+</script>
+</body>
+</html>
